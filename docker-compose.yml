@@ -1,0 +1,8 @@
+services:
+  web:
+    build: .
+    container_name: automation-joy
+    ports:
+      - "80:80"
+    restart: unless-stopped
+

@@ -14,7 +14,7 @@ export const Footer = () => {
               <span className="text-foreground">Flow</span>
             </a>
             <p className="text-muted-foreground text-sm">
-              Автоматизация бизнес-процессов на базе n8n, Make.com и Telegram API
+              Автоматизация бизнес-процессов, Telegram-боты и интеграции под ваши задачи.
             </p>
           </div>
 
@@ -22,14 +22,14 @@ export const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Контакты</h4>
             <div className="space-y-3">
-              <a 
+              <a
                 href="mailto:hello@example.com"
                 className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
               >
                 <Mail className="w-4 h-4" />
                 hello@example.com
               </a>
-              <a 
+              <a
                 href="https://t.me/yourhandle"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -45,8 +45,7 @@ export const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Время ответа</h4>
             <p className="text-muted-foreground text-sm">
-              Обычно отвечаю в течение 2-4 часов в рабочие дни. 
-              По срочным вопросам — пишите в Telegram.
+              Обычно отвечаю в течение 2–4 часов в рабочие дни. По срочным вопросам — пишите в Telegram.
             </p>
           </div>
         </div>
@@ -66,3 +65,4 @@ export const Footer = () => {
     </footer>
   );
 };
+

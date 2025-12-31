@@ -32,7 +32,7 @@ export const Hero = () => {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8 animate-fade-up">
             <Zap className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-primary">n8n • Make.com • Telegram API</span>
+            <span className="text-sm font-medium text-primary">No-code автоматизация • интеграции • Telegram API</span>
           </div>
 
           {/* Main headline */}
@@ -70,8 +70,7 @@ export const Hero = () => {
           <div className="mt-16 pt-8 border-t border-border/30 animate-fade-up animation-delay-400">
             <p className="text-sm text-muted-foreground mb-4">Работаю с инструментами</p>
             <div className="flex items-center justify-center gap-8 flex-wrap text-muted-foreground/60">
-              <span className="text-lg font-semibold">n8n</span>
-              <span className="text-lg font-semibold">Make.com</span>
+              <span className="text-lg font-semibold">No-code платформы</span>
               <span className="text-lg font-semibold">Telegram API</span>
               <span className="text-lg font-semibold">REST APIs</span>
               <span className="text-lg font-semibold">Webhooks</span>

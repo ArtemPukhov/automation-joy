@@ -15,25 +15,28 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>AutoFlow — Автоматизация бизнес-процессов | n8n, Make.com, Telegram-боты</title>
-        <meta 
-          name="description" 
-          content="Автоматизация продаж, склада, поддержки и документооборота. Интеграции сервисов, Telegram-боты, парсинг данных. Экономьте время и деньги с автоматизацией от эксперта." 
+        <title>AutoFlow — Автоматизация бизнес-процессов и интеграций</title>
+        <meta
+          name="description"
+          content="Автоматизация продаж, склада, поддержки и документооборота. Интеграции сервисов, Telegram-боты, парсинг данных. Экономьте время и деньги с продуманной автоматизацией."
         />
-        <meta 
-          name="keywords" 
-          content="автоматизация бизнеса, n8n, make.com, telegram бот, интеграция API, автоматизация процессов" 
+        <meta
+          name="keywords"
+          content="автоматизация бизнеса, no-code, интеграции, telegram бот, интеграция API, автоматизация процессов"
         />
-        <meta property="og:title" content="AutoFlow — Автоматизация бизнес-процессов" />
-        <meta 
-          property="og:description" 
-          content="Автоматизация продаж, склада, поддержки и документооборота. Интеграции сервисов, Telegram-боты, парсинг данных." 
+        <meta
+          property="og:title"
+          content="AutoFlow — Автоматизация бизнес-процессов и интеграций"
+        />
+        <meta
+          property="og:description"
+          content="Автоматизация продаж, склада, поддержки и документооборота. Интеграции сервисов, Telegram-боты, парсинг данных."
         />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="ru_RU" />
         <link rel="canonical" href="https://autoflow.example.com" />
       </Helmet>
-      
+
       <div className="min-h-screen bg-background">
         <Header />
         <main>
@@ -54,3 +57,4 @@ const Index = () => {
 };
 
 export default Index;
+
