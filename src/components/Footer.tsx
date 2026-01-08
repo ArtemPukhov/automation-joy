@@ -23,14 +23,14 @@ export const Footer = () => {
             <h4 className="font-semibold mb-4">Контакты</h4>
             <div className="space-y-3">
               <a
-                href="mailto:hello@example.com"
+                href="mailto:artemm2006@list.ru"
                 className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
               >
                 <Mail className="w-4 h-4" />
                 hello@example.com
               </a>
               <a
-                href="https://t.me/yourhandle"
+                href="https://t.me/artempuh"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
