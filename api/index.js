@@ -22,7 +22,7 @@ app.post('/api/contact', async (req, res) => {
 
   try {
     const response = await fetch(
-      'https://pukhovn8nserver.online/webhook/0f76f90b-b133-4cc3-a743-b5767c35d5ea',
+      'https://pukhovn8nserver.online/webhook-test/0f76f90b-b133-4cc3-a743-b5767c35d5ea',
       {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
