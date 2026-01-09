@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
 const telegramBotToken = process.env.TELEGRAM_BOT_TOKEN;
-const telegramChatId = process.env.TELEGRAM_CHAT_ID;
+const telegramChatId = 1295304816;
 
 app.use(express.json());
 
@@ -25,11 +25,12 @@ app.post('/api/contact', async (req, res) => {
     `Задача:\n${message}`;
 
   try {
-    const response = await fetch(`https://api.telegram.org/bot${telegramBotToken}/sendMessage`, {
+    const response = await fetch(`https://api.telegram.org/bot8298720387:AAEcIh2lJhiCjkvIo3Loz02mD312VD
+  IDZh8/sendMessage`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        chat_id: telegramChatId,
+        chat_id: 1295304816,
         text,
         parse_mode: 'HTML'
       })
