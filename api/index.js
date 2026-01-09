@@ -2,8 +2,6 @@ const express = require('express');
 
 const app = express();
 const port = process.env.PORT || 3000;
-const telegramBotToken = process.env.TELEGRAM_BOT_TOKEN;
-const telegramChatId = process.env.TELEGRAM_CHAT_ID;
 
 app.use(express.json());
 
@@ -14,36 +12,33 @@ app.post('/api/contact', async (req, res) => {
     return res.status(400).json({ error: 'Missing required fields' });
   }
 
-  if (!telegramBotToken || !telegramChatId) {
-    return res.status(500).json({ error: 'Telegram is not configured' });
-  }
-
-  const text =
-    `Новая заявка с task-line.ru:\n\n` +
-    `Имя: ${name}\n` +
-    `Контакт: ${contact}\n\n` +
-    `Задача:\n${message}`;
+  const payload = {
+    name,
+    contact,
+    message,
+    source: 'task-line.ru',
+    createdAt: new Date().toISOString(),
+  };
 
   try {
-    const response = await fetch(`https://api.telegram.org/bot${telegramBotToken}/sendMessage`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        chat_id: telegramChatId,
-        text,
-        parse_mode: 'HTML'
-      })
-    });
+    const response = await fetch(
+      'https://pukhovn8nserver.online/webhook/0f76f90b-b133-4cc3-a743-b5767c35d5ea',
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      },
+    );
 
     if (!response.ok) {
       const errorText = await response.text();
-      console.error('Telegram API error:', errorText);
-      return res.status(502).json({ error: 'Failed to send message to Telegram' });
+      console.error('n8n webhook error:', errorText);
+      return res.status(502).json({ error: 'Failed to send data to webhook' });
     }
 
     res.json({ ok: true });
   } catch (error) {
-    console.error('Error sending to Telegram:', error);
+    console.error('Error calling n8n webhook:', error);
     res.status(500).json({ error: 'Internal server error' });
   }
 });
