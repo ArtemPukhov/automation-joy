@@ -10,8 +10,8 @@ export const Footer = () => {
           {/* Logo and description */}
           <div>
             <a href="#" className="flex items-center gap-2 text-xl font-bold mb-4">
-              <span className="gradient-text">Auto</span>
-              <span className="text-foreground">Flow</span>
+              <span className="gradient-text">Task</span>
+              <span className="text-foreground">Line</span>
             </a>
             <p className="text-muted-foreground text-sm">
               Автоматизация бизнес-процессов, Telegram-боты и интеграции под ваши задачи.
@@ -27,7 +27,7 @@ export const Footer = () => {
                 className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
               >
                 <Mail className="w-4 h-4" />
-                hello@example.com
+                artemm2006@list.ru
               </a>
               <a
                 href="https://t.me/artempuh"
@@ -36,7 +36,7 @@ export const Footer = () => {
                 className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
               >
                 <Send className="w-4 h-4" />
-                @yourhandle
+                @artempuh
               </a>
             </div>
           </div>
@@ -53,7 +53,7 @@ export const Footer = () => {
         {/* Bottom bar */}
         <div className="pt-8 border-t border-border/50 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
-            © {currentYear} AutoFlow. Все права защищены.
+            © {currentYear} TaskLine. Все права защищены.
           </p>
           <div className="flex items-center gap-6">
             <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">

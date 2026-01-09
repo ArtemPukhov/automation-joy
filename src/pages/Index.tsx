@@ -30,11 +30,11 @@ const Index = () => {
         />
         <meta
           property="og:description"
-          content="Автоматизация продаж, склада, поддержки и документооборота. Интеграции сервисов, Telegram-боты, парсинг данных."
+          content="Автоматизация продаж, склада, поддержки и документооборота. Интеграции сервисов, Telegram-боты, парсинг данных. Экономьте время и деньги с продуманной автоматизацией."
         />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="ru_RU" />
-        <link rel="canonical" href="https://autoflow.example.com" />
+        <link rel="canonical" href="https://task-line.ru" />
       </Helmet>
 
       <div className="min-h-screen bg-background">

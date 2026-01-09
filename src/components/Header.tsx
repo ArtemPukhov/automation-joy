@@ -56,8 +56,8 @@ export const Header = () => {
         <nav className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2 text-xl font-bold">
-            <span className="gradient-text">Auto</span>
-            <span className="text-foreground">Flow</span>
+            <span className="gradient-text">Task</span>
+            <span className="text-foreground">Line</span>
           </a>
 
           {/* Desktop Navigation */}
