@@ -8,6 +8,18 @@ services:
     networks:
       - webnet
 
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    container_name: automation-joy-api
+    restart: unless-stopped
+    environment:
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+      - TELEGRAM_CHAT_ID=${TELEGRAM_CHAT_ID}
+    networks:
+      - webnet
+
   caddy:
     image: caddy:latest
     container_name: caddy
