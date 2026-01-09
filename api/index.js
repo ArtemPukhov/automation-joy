@@ -32,8 +32,12 @@ app.post('/api/contact', async (req, res) => {
 
     if (!response.ok) {
       const errorText = await response.text();
-      console.error('n8n webhook error:', errorText);
-      return res.status(502).json({ error: 'Failed to send data to webhook' });
+      console.error('n8n webhook error:', response.status, errorText);
+      return res.status(502).json({
+        error: 'Failed to send data to webhook',
+        status: response.status,
+        body: errorText,
+      });
     }
 
     res.json({ ok: true });
@@ -46,4 +50,3 @@ app.post('/api/contact', async (req, res) => {
 app.listen(port, () => {
   console.log(`API server listening on port ${port}`);
 });
-
