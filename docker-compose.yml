@@ -15,8 +15,7 @@ services:
     container_name: automation-joy-api
     restart: unless-stopped
     environment:
-      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
-      - TELEGRAM_CHAT_ID=${TELEGRAM_CHAT_ID}
+      - N8N_WEBHOOK_URL=${N8N_WEBHOOK_URL}
     networks:
       - webnet
 

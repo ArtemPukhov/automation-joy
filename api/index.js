@@ -2,6 +2,7 @@ const express = require('express');
 
 const app = express();
 const port = process.env.PORT || 3000;
+const n8nWebhookUrl = process.env.N8N_WEBHOOK_URL;
 
 app.use(express.json());
 
@@ -10,6 +11,10 @@ app.post('/api/contact', async (req, res) => {
 
   if (!name || !contact || !message) {
     return res.status(400).json({ error: 'Missing required fields' });
+  }
+
+  if (!n8nWebhookUrl) {
+    return res.status(500).json({ error: 'Webhook URL is not configured' });
   }
 
   const payload = {
@@ -21,14 +26,11 @@ app.post('/api/contact', async (req, res) => {
   };
 
   try {
-    const response = await fetch(
-      'https://pukhovn8nserver.online/webhook-test/0f76f90b-b133-4cc3-a743-b5767c35d5ea',
-      {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-      },
-    );
+    const response = await fetch(n8nWebhookUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
 
     if (!response.ok) {
       const errorText = await response.text();
