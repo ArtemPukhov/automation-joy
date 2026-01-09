@@ -1,5 +1,5 @@
 task-line.ru, www.task-line.ru {
-    handle_path /api/* {
+    handle /api* {
         reverse_proxy api:3000
     }
 
