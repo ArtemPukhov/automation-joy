@@ -15,7 +15,7 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>AutoFlow — Автоматизация бизнес-процессов и интеграций</title>
+        <title>TaskLine — Автоматизация бизнес-процессов и интеграций</title>
         <meta
           name="description"
           content="Автоматизация продаж, склада, поддержки и документооборота. Интеграции сервисов, Telegram-боты, парсинг данных. Экономьте время и деньги с продуманной автоматизацией."
@@ -26,7 +26,7 @@ const Index = () => {
         />
         <meta
           property="og:title"
-          content="AutoFlow — Автоматизация бизнес-процессов и интеграций"
+          content="TaskLine — Автоматизация бизнес-процессов и интеграций"
         />
         <meta
           property="og:description"
