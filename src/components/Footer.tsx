@@ -23,20 +23,20 @@ export const Footer = () => {
             <h4 className="font-semibold mb-4">Контакты</h4>
             <div className="space-y-3">
               <a
-                href="mailto:artemm2006@list.ru"
+                href="mailto:TaskLineArt@yandex.com"
                 className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
               >
                 <Mail className="w-4 h-4" />
-                artemm2006@list.ru
+                TaskLineArt@yandex.com
               </a>
               <a
-                href="https://t.me/artempuh"
+                href="https://t.me/TaskLineChat_bot"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
               >
                 <Send className="w-4 h-4" />
-                @artempuh
+                @TaskLineChat_bot
               </a>
             </div>
           </div>
@@ -65,4 +65,3 @@ export const Footer = () => {
     </footer>
   );
 };
-
