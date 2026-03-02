@@ -9,6 +9,7 @@ import { Testimonials } from '@/components/Testimonials';
 import { FAQ } from '@/components/FAQ';
 import { Contact } from '@/components/Contact';
 import { Footer } from '@/components/Footer';
+import { FloatingTelegramButton } from '@/components/FloatingTelegramButton';
 import { Helmet } from 'react-helmet-async';
 
 const Index = () => {
@@ -51,10 +52,10 @@ const Index = () => {
           <Contact />
         </main>
         <Footer />
+        <FloatingTelegramButton />
       </div>
     </>
   );
 };
 
 export default Index;
-
