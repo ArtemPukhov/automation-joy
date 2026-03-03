@@ -3,6 +3,18 @@ import { Button } from '@/components/ui/button';
 
 const plans = [
   {
+    name: 'Простой бот',
+    price: 'от 5 000 ₽',
+    description: 'Для быстрого запуска простого Telegram-бота',
+    features: [
+      '1 простой Telegram-бот',
+      'Базовая логика и сценарий',
+      'Подключение и первичная настройка',
+      'Короткая инструкция по использованию',
+    ],
+    highlighted: false,
+  },
+  {
     name: 'Старт',
     price: 'от 30 000 ₽',
     description: 'Для небольших задач и пилотных проектов',
@@ -13,7 +25,7 @@ const plans = [
       '2 недели поддержки',
       'Исходный код вам',
     ],
-    highlighted: false,
+    highlighted: true,
   },
   {
     name: 'Бизнес',
@@ -27,7 +39,7 @@ const plans = [
       '1 месяц поддержки',
       'Приоритетная связь',
     ],
-    highlighted: true,
+    highlighted: false,
   },
   {
     name: 'Партнёрство',
@@ -64,7 +76,7 @@ export const Pricing = () => {
         </div>
 
         {/* Pricing cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-12">
           {plans.map((plan) => (
             <div
               key={plan.name}
